@@ -1,0 +1,193 @@
+.section {
+    text-align:center;
+    background-color: initial!important;
+  }
+header{
+    position: absolute;
+}
+  body {
+	background: rgb(42, 49, 59) none repeat scroll 0% 0%;
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.PT-section{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+.PT-section{
+    &::after {
+        content: ' ';
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background: #fdd1e1;
+        right: 32px;
+        opacity: .5;
+    }
+    &.yellow{
+        &::after {
+            background: #ffefc4;
+        }
+    }
+    &.green{
+        &::after {
+            background: #c8ede7;
+        }
+    }
+}
+.principalText{
+    font-family: 'Concert One', cursive;
+    font-size: 4.6em;
+    line-height: 1;
+}
+
+.principalPink{
+    color: #f95794
+}
+.secondaryPink{
+    color: #fdd1e1;
+}
+
+.modal{
+    .close span {
+        color: white;
+        font-size: 28px;
+    }
+    .modal-header {
+        border-bottom: none;
+        padding: 0;
+        color: white;
+    }
+    .modal-dialog{
+
+        max-width: 850px;
+    }
+    .modal-content{
+        background-color: initial;
+    }
+    video{
+        width: 100%;
+    }
+}
+.principalYellow{
+    color: #ffd14f;
+}
+.thirdYellow{
+    color: #ffefc4;
+}
+.white-bg{
+    background-color: white!important;
+}
+.secondaryYellow{
+    color: #d1a322;
+}
+
+.primaryGreen{
+    color: #38bfa7;
+}
+.secondaryGreen{
+    color: #6ed0be;
+}
+.thirdGreen{
+    color: #c8ede7;
+}
+h1{
+    font-family: 'Work Sans', sans-serif;
+}
+.p-left-0{
+    padding-left: 0;
+}
+.m-bottom-40{
+    margin-bottom: 40px;
+}
+.m-bottom-10{
+    margin-bottom: 10px;
+}
+.m-bottom-20{
+    margin-bottom: 20px;
+}
+.max-width{
+    max-width: 700px;
+    width: 95%;
+}
+.text-left{
+    text-align: left;
+}
+.d-block{
+    display: block;
+}
+
+.section-icon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    line-height: 50px;
+    z-index: 3;
+    background: rgb(42, 49, 59) none repeat scroll 0% 0%;
+    &.pink{
+        border-color: #fdd1e1;
+    }
+    &.yellow{
+        border-color: #ffefc4;
+    }
+    &.green{
+        border-color: #c8ede7;
+    }
+}
+
+.brandList{
+    font-size:0;
+    margin: 60px 0 0;
+    li{
+        display: inline-block;
+        width: 33.3%;
+        font-size: 16px;
+        margin-bottom: 30px;
+        a{
+            font-size: 2em;
+            display: block;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 100%;
+            margin: 20px auto 15px;
+            border: 3px solid rgba(255,255,255,.9);
+            color: #6ed0be;
+        }
+        span{
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            color: #c8ede7;
+        }
+        @media only screen and (max-width: 768px) {
+            width: 50%;
+        }
+    }
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

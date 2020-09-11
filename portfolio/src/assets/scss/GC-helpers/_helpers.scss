@@ -1,0 +1,75 @@
+::-webkit-input-placeholder { /* Edge */
+    color: $primary-gray;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $primary-gray;
+  }
+  
+  ::placeholder {
+    color: $primary-gray;
+  }
+.checkboxInput{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 24px;
+    input{
+        visibility: hidden;
+        height: 0;
+        position: absolute;
+        &:checked + span{
+            &::before{
+                content: ' ';
+                display: block;
+                position: absolute;
+                width: 70%;
+                height: 70%;
+                top: 15%;
+                left: 15%;
+                background: $primary-yellow;
+            }
+        }
+    }
+    span{
+        position: relative;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: $secondary-gray;
+        border: solid 1px $primary-gray;
+    }
+}
+.checkbox_text{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.customInput{
+    height: 48px;
+    background: $secondary-gray;
+    border: solid 1px $primary-gray;
+    color: $primary-yellow;
+    width: 100%;
+    max-width: 320px;
+    padding: 0 16px;
+}
+
+.btn{
+    border-radius: 0;
+    &--green{
+        padding: 16px 44px;
+        font-family: 'ASM-Bold';
+        font-size: 14px;
+        background: $primary-yellow;
+        &:hover{
+            background: none;
+            border: 1px solid $primary-yellow;
+            color: $primary-yellow;
+        }
+    }
+}
+
+.error{
+    color: $red;
+    font-family: 'ASM-Regular';
+}

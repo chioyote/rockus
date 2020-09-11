@@ -1,0 +1,12 @@
+#exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        video(src=resourceLocator+"/img/videos/bendito.mp4" controls)
+
+script(src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js")
+script(src="https://kit.fontawesome.com/3750a0ad7c.js" crossorigin="anonymous")
+script(src=resourceLocator+"js/custom.js")

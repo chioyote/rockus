@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'ASM-Bold';
+    src: url('../fonts/ASM-Bold.eot?#iefix') format('embedded-opentype'),  
+        url('../fonts/ASM-Bold.otf')  format('opentype'),
+        url('../fonts/ASM-Bold.woff') format('woff'), 
+        url('../fonts/ASM-Bold.ttf')  format('truetype'), 
+        url('../fonts/ASM-Bold.svg#ASM-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ASM-Regular';
+    src: url('../fonts/ASM-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ASM-Regular.otf')  format('opentype'),
+        url('../fonts/ASM-Regular.woff') format('woff'), 
+        url('../fonts/ASM-Regular.ttf')  format('truetype'), 
+        url('../fonts/ASM-Regular.svg#ASM-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eina02-Regular';
+    src: url('../fonts/Eina02-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Eina02-Regular.otf')  format('opentype'),
+        url('../fonts/Eina02-Regular.woff') format('woff'), 
+        url('../fonts/Eina02-Regular.ttf')  format('truetype'), 
+        url('../fonts/Eina02-Regular.svg#ASM-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Eina02-Light';
+    src: url('../fonts/Eina02-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Eina02-Light.otf')  format('opentype'),
+        url('../fonts/Eina02-Light.woff') format('woff'), 
+        url('../fonts/Eina02-Light.ttf')  format('truetype'), 
+        url('../fonts/Eina02-Light.svg#ASM-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$sizes: $big-size, $second-size, $third-size, $data-size, $base-size, $special-size;
+$fonts: (asm-bold:'ASM-Bold', asm:'ASM-Regular', eina:'Eina02-Regular', eina-light: "Eina02-Light");
+
+@each $name, $font in $fonts {
+    .font-#{$name} {
+      font-family: $font;
+    }
+}
+
+@each $size in $sizes {
+    .font-#{$size} {
+      font-size: $size;
+    }
+}
+
+$text-align: 'left','center','right','justify';
+
+@each $align in $text-align {
+    .text-#{$align} {
+      text-align: $align;
+    }
+}
+  
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+}
+
+.font-light{
+    font-weight: lighter;
+}

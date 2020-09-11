@@ -1,0 +1,64 @@
+extends ../layouts/col-1/col-1.pug
+block vars
+  - levelAssets = "";
+  - pageName = "Index";
+  - resourceLocator = is_develop ? levelAssets : base_url;
+block slot-1
+  #fullpage
+    .section#section1 
+      .PT-section
+        div
+          strong.principalText.principalPink Rocio Ortiz García
+          h1.secondaryPink Desarrollo Front-end
+        span.section-icon.pink
+          i.secondaryPink(class="fas fa-heart")
+    .section#section2
+      .PT-section.yellow
+        .max-width.text-left
+          strong.principalText.principalYellow.m-bottom-10.d-block Sobre mi...
+          p.thirdYellow.m-bottom-40 Soy apasionada del código, me gusta pensar, crear y resolver. 
+          strong.secondaryYellow.m-bottom-10.d-block Estudios
+          ul.thirdYellow.p-left-0
+            li 2015- 50hrs. - Curso "Programación Php", Macschool.
+            li 2014- 30hrs. - Curso "Usabilidad y Experiencia de Usuario con Sistemas Interactivos", ITAM 
+            li 2013- 90hrs - Diplomado Diseño Gráfico Avanzado, eduMac Centro de Artes Digitales 
+            li 2011-90hrs - Diplomado de Diseño Web, eduMac Centro de Artes Digitales.
+            li 2011-60hrs - Curso de Diseño Web Avanzado, eduMac Centro de Artes Digitales
+            li 2007-2011 - Licenciatura en Diseño y Comunicación VIsual - ENAP UNAM
+          strong.secondaryYellow.m-bottom-10.d-block Experiencia laboral
+          ul.thirdYellow.p-left-0
+            li Desarrollador Front-end (Gluo), Febrero 2020 - actual
+            li Desarrollador Front-end (Ingenia), Junio 2018 - Febrero 2020
+            li Web Developer (An_Global), Mayo 2016 - Junio 2018
+            li Desarrollador Fullstack Jr. (Gurúweb - BNN), Octubre2015 - Mayo 2016
+            li Desarrollador Fullstack Jr. (BNN), Abril 2015 - Octubre 2015
+            li Desarrollador Front-end / UX. (BNN), Enero 2014 - Abril 2015
+        span.section-icon.yellow
+          i.thirdYellow(class="fas fa-brain")
+    .section
+      .PT-section.green
+        .max-width.text-center
+          strong.principalText.primaryGreen.m-bottom-10.d-block Mi trabajo 
+          
+          ul.p-left-0.brandList
+            li 
+              a.changeVideo(href="#" data-video=resourceLocator+"/img/videos/bendito.mp4") BC
+              span Bendito coche
+            li 
+              a.changeVideo(href="#" data-video=resourceLocator+"/img/videos/fr.mp4") FR
+              span Fiesta Rewards
+            li 
+              a.changeVideo(href="#" data-video=resourceLocator+"/img/videos/kandoo.mp4") K
+              span Kandoo
+            li 
+              a.changeVideo(href="#" data-video=resourceLocator+"/img/videos/playbook.mp4") P
+              span Playbook
+            li 
+              a.changeVideo(href="#" data-video=resourceLocator+"/img/videos/sportme.mp4") S
+              span Sportme
+            li 
+              a.changeVideo(href="#" data-video=resourceLocator+"/img/videos/tecmilenio.mp4") T
+              span Tecmilenio
+            
+        span.section-icon.green
+          i.secondaryGreen(class="fas fa-coffee")
