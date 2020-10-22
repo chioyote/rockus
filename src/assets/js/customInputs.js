@@ -98,7 +98,7 @@ class customizeEachInput{
 }
 
 class InputFunctionalities{
-    
+
     selectFunctionality(element){
         var selectElement = element.getElementsByClassName('CE-select--select__selected'),
             listElement = element.getElementsByTagName('ul');
@@ -117,7 +117,7 @@ class InputFunctionalities{
         listElement[0].addEventListener('click', (e) => {
             var that = e.target,
                 thatValue = '',
-                siblingInput = element.getElementsByClassName('CE-select--input');
+                siblingInput = element.getElementsByClassName('CE-select--inputs');
 
                 if(that.tagName == 'LI'){
                     thatValue = that.getAttribute('data-value');
