@@ -1,0 +1,55 @@
+extends ../layouts/col-1/col-1.pug
+block vars
+  - levelAssets = "";
+  - pageName = "Index";
+  - resourceLocator = is_develop ? levelAssets : base_url;
+block slot-1
+  section
+    .container
+      form(action="")
+        fieldset
+          .clearBoth
+            label(for="text") Name
+            input.customizeInput(type="text" name="text" id="text")
+          .clearBoth
+            label(for="texta") NameA
+            input(type="text" name="texta" id="texta")
+        fieldset
+          .clearBoth
+            select.especialSelect.slk(name="select" data-arrow-classes="fa fa-sort-down")
+              option(value="") Selecciona
+              option(value="1") 1
+              option(value="2") 2
+              option(value="3") 3
+          .clearBoth
+            select.espSel(name="select2")
+              option(value="") Selecciona 2
+              option(value="12") 12
+              option(value="23") 23
+              option(value="34") 34
+          .clearBoth
+            select.noSelected(name="select2")
+              option(value="") Selecciona
+              option(value="1") 1
+              option(value="2") 2
+              option(value="3") 3º
+        fieldset
+          .clearBoth
+            label(for="check") ejemplo de checkbox
+            input(type="checkbox" name="check" id="check")
+          .clearBoth
+            label(for="radios") ejemplo de radio
+            input(type="radio" name="radios" id="radios")
+          .clearBoth
+            label(for="radios2") ejemplo de radio 2
+            input(type="radio" name="radios" id="radios2")
+          .clearBoth
+            label(for="radiosv") ejemplo de radiov
+            input.noSelected(type="radio" name="radiosv" id="radiosv")
+        fieldset
+          .clearBoth
+            label(for="txt") ejemplo de textarea
+            textarea.customizeInput(id="txt" name="txt", cols="30", rows="10")
+        
+  append script
+    script(src=resourceLocator+"js/customInputs.js")

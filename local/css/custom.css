@@ -1,0 +1,169 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+    -o-transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 750px;
+  margin: 30px auto;
+}
+
+input, textarea {
+  border: 1px solid;
+}
+
+.CE--element__hidden {
+  height: 0;
+  overflow: hidden;
+}
+
+.CE--element__d-none {
+  display: none;
+}
+
+.CE-select {
+  border: 1px solid;
+  display: block;
+  max-width: 250px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.CE-select--label {
+  display: inline-block;
+  width: 90%;
+  padding: 0 10px;
+}
+
+.CE-select--arrow {
+  display: inline-block;
+  width: 10%;
+  text-align: center;
+}
+
+.CE-select--select__selected {
+  background: red;
+  padding: 6px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 250px;
+}
+
+.CE-select--select ul {
+  max-height: 0;
+  list-style: none;
+  overflow: hidden;
+  padding: 0 10px;
+  -webkit-transition: max-height 0.10s ease-out;
+  -o-transition: max-height 0.10s ease-out;
+  transition: max-height 0.10s ease-out;
+}
+
+.CE-select--select ul::before, .CE-select--select ul::after {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 10px;
+}
+
+.CE-select--select__open ul {
+  max-height: 300px;
+  -webkit-transition: max-height 0.10s ease-in;
+  -o-transition: max-height 0.10s ease-in;
+  transition: max-height 0.10s ease-in;
+}
+
+.CE-select--select__open .CE--select__arrow {
+  -webkit-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  transform: scaleY(-1);
+}

@@ -1,0 +1,65 @@
+//generales
+.CE--element{
+    &__hidden{
+        height: 0;
+        overflow: hidden;
+    }
+    &__d-none{
+        display: none;
+    }
+}
+
+// select
+.CE-select{
+    border: 1px solid;
+    display: block;
+    max-width: 250px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    &--label{
+        display: inline-block;
+        width: 90%;
+        padding: 0 10px;
+    }
+    &--arrow{
+        display: inline-block;
+        width: 10%;
+        text-align: center;
+    }
+    &--select{
+
+        &__selected{
+            background: red;
+            padding: 6px 0;
+            display: flex;
+            max-width: 250px;
+        }
+        ul{
+            max-height: 0;
+            list-style: none;
+            overflow: hidden;
+            padding: 0 10px;
+            transition: max-height 0.10s ease-out;
+            &::before, &::after{
+                content: ' ';
+                display: block;
+                width: 100%;
+                height: 10px;
+            }
+        }
+        &__open{
+            ul{
+                max-height: 300px;
+                transition: max-height 0.10s ease-in;
+            }
+            .CE--select__arrow{
+                transform: scaleY(-1);
+            }
+        }
+    }
+    
+    
+   
+    
+}
